@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "X-Team Extension",
+  "version": "1.0.0",
+  "description": "X-Team Extension",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "X-Team Extension"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["alarms", "storage"],
+  "host_permissions": ["http://localhost:3000/*"]
+}
