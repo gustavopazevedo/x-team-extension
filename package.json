@@ -9,7 +9,8 @@
     "build:watch": "vite build --watch",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "npm run build && node ./mockServer.js"
+    "start": "npm run build && node ./mockServer.js",
+    "mockServer": "node mockServer.js"
   },
   "dependencies": {
     "@faker-js/faker": "^9.0.3",
