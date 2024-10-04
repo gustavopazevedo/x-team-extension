@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import copy from "rollup-plugin-copy";
 import {
   extensionReloaderBuildStep,
   extensionReloaderWatchExternal,
@@ -16,17 +15,6 @@ export default defineConfig({
     extensionReloaderBuildStep("src/manifest.json"),
     extensionReloaderWatchExternal("src/**/*"),
     extensionReloaderWebSocket(),
-    copy({
-      targets: [
-        {
-          src: "src/*",
-          dest: ".",
-          ignore: ["**/*.js", "**/*.ts", "**/manifest.json"],
-        },
-      ],
-      copyOnce: false,
-      flatten: true,
-    }),
   ],
   build: {
     emptyOutDir: true,
